@@ -1,4 +1,4 @@
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+<div class="col-lg-10 col-lg-offset-1 col-md-12">
   <h2 id="title">Ember-String-Helpers</h2>
   
   <p class="lead">Use various string helpers in your Ember CLI application templates.</p>
@@ -26,4 +26,143 @@
     </div>
   </div>
   
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">Number Format</div>
+    </div>
+    <div class="panel-body">
+      <h5 class="text-uppercase text-muted">Examples</h5>
+      
+      <ul>
+        <li>
+          1234.56 &rarr; {{number-format '1234.56'}}
+          <ul>
+            <li>
+              <code>\{{number-format '1234.56'}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          1234.56 &rarr; {{number-format '1234.56' decimals=2 decimalPoint=',' thousandsSeparator=' '}}
+          <ul>
+            <li>
+              <code>\{{number-format '1234.56' decimals=2 decimalPoint=',' thousandsSeparator=' '}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          1234.5678 &rarr; {{number-format '1234.5678' decimals=2 decimalPoint='.' thousandsSeparator=''}}
+          <ul>
+            <li>
+              <code>\{{number-format '1234.5678' decimals=2 decimalPoint='.' thousandsSeparator=''}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          67 &rarr; {{number-format '67' decimals=2 decimalPoint=',' thousandsSeparator='.'}}
+          <ul>
+            <li>
+              <code>\{{number-format '67' decimals=2 decimalPoint=',' thousandsSeparator='.'}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          1000 &rarr; {{number-format '1000'}}
+          <ul>
+            <li>
+              <code>\{{number-format '1000'}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          67.311 &rarr; {{number-format '67.311' decimals=2}}
+          <ul>
+            <li>
+              <code>\{{number-format '67.311' decimals=2}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          1000.55 &rarr; {{number-format '1000.55' decimals=1}}
+          <ul>
+            <li>
+              <code>\{{number-format '1000.55' decimals=1}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          67000 &rarr; {{number-format '67000' decimals=5 decimalPoint=',' thousandsSeparator='.'}}
+          <ul>
+            <li>
+              <code>\{{number-format '67000' decimals=5 decimalPoint=',' thousandsSeparator='.'}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          0.9 &rarr; {{number-format '0.9' decimals=0}}
+          <ul>
+            <li>
+              <code>\{{number-format '0.9' decimals=0}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          1.20 &rarr; {{number-format '1.20' decimals=2}}
+          <ul>
+            <li>
+              <code>\{{number-format '1.20' decimals=2}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          1.20 &rarr; {{number-format '1.20' decimals=4}}
+          <ul>
+            <li>
+              <code>\{{number-format '1.20' decimals=4}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          1.20 &rarr; {{number-format '1.20' decimals=2 trimZeros=true}}
+          <ul>
+            <li>
+              <code>\{{number-format '1.20' decimals=2 trimZeros=true}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          1.20 &rarr; {{number-format '1.20' decimals=4 trimZeros=true}}
+          <ul>
+            <li>
+              <code>\{{number-format '1.20' decimals=4 trimZeros=true}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          1.2000 &rarr; {{number-format '1.2000' decimals=3}}
+          <ul>
+            <li>
+              <code>\{{number-format '1.2000' decimals=3}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          1 000,50 &rarr; {{number-format '1 000,50' decimals=2 decimalPoint='.' thousandsSeparator=' '}}
+          <ul>
+            <li>
+              <code>\{{number-format '1 000,50' decimals=2 decimalPoint='.' thousandsSeparator=' '}}</code>
+            </li>
+          </ul>
+        </li>
+        <li>
+          1e-8 &rarr; {{number-format '1e-8' decimals=8 decimalPoint='.' thousandsSeparator=''}}
+          <ul>
+            <li>
+              <code>\{{number-format '1e-8' decimals=8 decimalPoint='.' thousandsSeparator=''}}</code>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
