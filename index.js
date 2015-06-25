@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-string-helpers'
+  name: 'ember-string-helper'
 };
