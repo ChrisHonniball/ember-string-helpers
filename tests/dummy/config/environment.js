@@ -12,7 +12,15 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' maxcdn.bootstrapcdn.com",
+      'font-src': "'self' fonts.gstatic.com maxcdn.bootstrapcdn.com",
+      'connect-src': "'self'",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com maxcdn.bootstrapcdn.com",
+      'media-src': "'self'"
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
