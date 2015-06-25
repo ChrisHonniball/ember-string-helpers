@@ -1,0 +1,1 @@
+export { default } from 'ember-string-helpers/blueprints/ember-string-helpers';

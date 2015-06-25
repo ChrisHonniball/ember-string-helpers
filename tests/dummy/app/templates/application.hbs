@@ -9,167 +9,594 @@
   
   <hr>
   
-  <div class="panel panel-default">
+  <div class="panel panel-default" id="helper-format-phone">
     <div class="panel-heading">
       <div class="panel-title">Format Phone</div>
     </div>
+    
     <div class="panel-body">
       <h5 class="text-uppercase text-muted">Supported Formats</h5>
       <ul>
         <li><strong>US Standard:</strong> (999) 999-9999</li>
       </ul>
+      <h5 class="text-uppercase text-muted">Parameters</h5>
+      
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Param</th>
+            <th style="width: 15%;">Default <span class="small text-muted">type</span></th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th><code>phone</code></th>
+            <td><code>""</code> <span class="small text-muted">int or string</span></td>
+            <td>The phone number to be formatted.</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
       
       <h5 class="text-uppercase text-muted">Example</h5>
-      <ul>
-        <li>
-          8661239876 &rarr; {{format-phone "8661239876"}} 
-          <ul>
-            <li>
-              <code>\{{format-phone "8661239876"}}</code>
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td><code>\{{format-phone "8661239876"}}</code></td>
+            <td>{{format-phone "8661239876"}}</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="2"></td></tr></tfoot>
+      </table>
     </div>
   </div>
   
-  <div class="panel panel-default">
+  <div class="panel panel-default" id="helper-number-format">
     <div class="panel-heading">
       <div class="panel-title">Number Format</div>
     </div>
+    
     <div class="panel-body">
-      <h5 class="text-uppercase text-muted">Examples</h5>
+      <h5 class="text-uppercase text-muted">Parameters</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Param</th>
+            <th style="width: 15%;">Default <span class="small text-muted">type</span></th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th><code>number</code></th>
+            <td><code>""</code> <span class="small text-muted">int or string</span></td>
+            <td>The number to be formatted.</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
       
+      <h5 class="text-uppercase text-muted">Hashed Params</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Param</th>
+            <th style="width: 15%;">Default <span class="small text-muted">type</span></th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th><code>decimals</code></th>
+            <td><code>2</code> <span class="small text-muted">int</span></td>
+            <td>The number of desired decimal places.</td>
+          </tr>
+          <tr>
+            <th><code>decimalPoint</code></th>
+            <td><code>"."</code> <span class="small text-muted">string</span></td>
+            <td>The character used to separate the <abbr title="characters to the left of the decimal">chatacteristic</abbr> and the <abbr title="characters to the right of the decimal point">mantissa</abbr>.</td>
+          </tr>
+          <tr>
+            <th><code>thousandsSeparator</code></th>
+            <td><code>","</code> <span class="small text-muted">string</span></td>
+            <td>The number of desired decimal places to round the number to.</td>
+          </tr>
+          <tr>
+            <th><code>trimZeros</code></th>
+            <td><code>false</code> <span class="small text-muted">boolean</span></td>
+            <td>The number of desired decimal places to round the number to.</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+      
+      <h5 class="text-uppercase text-muted">Examples</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td><code>\{{number-format '1234.56'}}</code></td>
+            <td>{{number-format '1234.56'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '1234.56' decimals=2 decimalPoint=',' thousandsSeparator=' '}}</code></td>
+            <td>{{number-format '1234.56' decimals=2 decimalPoint=',' thousandsSeparator=' '}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '1234.5678' decimals=2 decimalPoint='.' thousandsSeparator=''}}</code></td>
+            <td>{{number-format '1234.5678' decimals=2 decimalPoint='.' thousandsSeparator=''}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '67' decimals=2 decimalPoint=',' thousandsSeparator='.'}}</code></td>
+            <td>{{number-format '67' decimals=2 decimalPoint=',' thousandsSeparator='.'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '1000'}}</code></td>
+            <td>{{number-format '1000'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '67.311' decimals=2}}</code></td>
+            <td>{{number-format '67.311' decimals=2}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '1000.55' decimals=1}}</code></td>
+            <td>{{number-format '1000.55' decimals=1}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '67000' decimals=5 decimalPoint=',' thousandsSeparator='.'}}</code></td>
+            <td>{{number-format '67000' decimals=5 decimalPoint=',' thousandsSeparator='.'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '0.9' decimals=0}}</code></td>
+            <td>{{number-format '0.9' decimals=0}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '1.20' decimals=2}}</code></td>
+            <td>{{number-format '1.20' decimals=2}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '1.20' decimals=4}}</code></td>
+            <td>{{number-format '1.20' decimals=4}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '1.20' decimals=2 trimZeros=true}}</code></td>
+            <td>{{number-format '1.20' decimals=2 trimZeros=true}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '1.20' decimals=4 trimZeros=true}}</code></td>
+            <td>{{number-format '1.20' decimals=4 trimZeros=true}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '1.2000' decimals=3}}</code></td>
+            <td>{{number-format '1.2000' decimals=3}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '1 000,50' decimals=2 decimalPoint='.' thousandsSeparator=' '}}</code></td>
+            <td>{{number-format '1 000,50' decimals=2 decimalPoint='.' thousandsSeparator=' '}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{number-format '1e-8' decimals=8 decimalPoint='.' thousandsSeparator=''}}</code></td>
+            <td>{{number-format '1e-8' decimals=8 decimalPoint='.' thousandsSeparator=''}}</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+  
+  <div class="panel panel-default" id="helper-format-date">
+    <div class="panel-heading">
+      <div class="panel-title">Format Date</div>
+    </div>
+    
+    <div class="panel-body">
+      <h5 class="text-uppercase text-muted">Supported Formats</h5>
       <ul>
-        <li>
-          1234.56 &rarr; {{number-format '1234.56'}}
-          <ul>
-            <li>
-              <code>\{{number-format '1234.56'}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          1234.56 &rarr; {{number-format '1234.56' decimals=2 decimalPoint=',' thousandsSeparator=' '}}
-          <ul>
-            <li>
-              <code>\{{number-format '1234.56' decimals=2 decimalPoint=',' thousandsSeparator=' '}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          1234.5678 &rarr; {{number-format '1234.5678' decimals=2 decimalPoint='.' thousandsSeparator=''}}
-          <ul>
-            <li>
-              <code>\{{number-format '1234.5678' decimals=2 decimalPoint='.' thousandsSeparator=''}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          67 &rarr; {{number-format '67' decimals=2 decimalPoint=',' thousandsSeparator='.'}}
-          <ul>
-            <li>
-              <code>\{{number-format '67' decimals=2 decimalPoint=',' thousandsSeparator='.'}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          1000 &rarr; {{number-format '1000'}}
-          <ul>
-            <li>
-              <code>\{{number-format '1000'}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          67.311 &rarr; {{number-format '67.311' decimals=2}}
-          <ul>
-            <li>
-              <code>\{{number-format '67.311' decimals=2}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          1000.55 &rarr; {{number-format '1000.55' decimals=1}}
-          <ul>
-            <li>
-              <code>\{{number-format '1000.55' decimals=1}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          67000 &rarr; {{number-format '67000' decimals=5 decimalPoint=',' thousandsSeparator='.'}}
-          <ul>
-            <li>
-              <code>\{{number-format '67000' decimals=5 decimalPoint=',' thousandsSeparator='.'}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          0.9 &rarr; {{number-format '0.9' decimals=0}}
-          <ul>
-            <li>
-              <code>\{{number-format '0.9' decimals=0}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          1.20 &rarr; {{number-format '1.20' decimals=2}}
-          <ul>
-            <li>
-              <code>\{{number-format '1.20' decimals=2}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          1.20 &rarr; {{number-format '1.20' decimals=4}}
-          <ul>
-            <li>
-              <code>\{{number-format '1.20' decimals=4}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          1.20 &rarr; {{number-format '1.20' decimals=2 trimZeros=true}}
-          <ul>
-            <li>
-              <code>\{{number-format '1.20' decimals=2 trimZeros=true}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          1.20 &rarr; {{number-format '1.20' decimals=4 trimZeros=true}}
-          <ul>
-            <li>
-              <code>\{{number-format '1.20' decimals=4 trimZeros=true}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          1.2000 &rarr; {{number-format '1.2000' decimals=3}}
-          <ul>
-            <li>
-              <code>\{{number-format '1.2000' decimals=3}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          1 000,50 &rarr; {{number-format '1 000,50' decimals=2 decimalPoint='.' thousandsSeparator=' '}}
-          <ul>
-            <li>
-              <code>\{{number-format '1 000,50' decimals=2 decimalPoint='.' thousandsSeparator=' '}}</code>
-            </li>
-          </ul>
-        </li>
-        <li>
-          1e-8 &rarr; {{number-format '1e-8' decimals=8 decimalPoint='.' thousandsSeparator=''}}
-          <ul>
-            <li>
-              <code>\{{number-format '1e-8' decimals=8 decimalPoint='.' thousandsSeparator=''}}</code>
-            </li>
-          </ul>
-        </li>
+        <li>Any <a href="http://moment.js" target="_blank">moment.js</a> supported format. <a href="http://momentjs.com/docs/#/displaying/format/" target="_blank">Moment.js formatting docs</a></li>
       </ul>
+      
+      <h5 class="text-uppercase text-muted">Parameters</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Param</th>
+            <th style="width: 15%;">Default <span class="small text-muted">type</span></th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th><code>date</code></th>
+            <td><code>""</code> <span class="small text-muted">string</span></td>
+            <td>The date to be formatted.</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+      
+      <h5 class="text-uppercase text-muted">Hashed Params</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th style="width: 15%;">Param</th>
+            <th style="width: 45%;">Default <span class="small text-muted">type</span></th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th><code>format</code></th>
+            <td><code>"dddd, MMMM Do YYYY, h:mm a"</code> <span class="small text-muted">moment format string</span></td>
+            <td>The desired output format of the date.</td>
+          </tr>
+          <tr>
+            <th><code>inputFormat</code></th>
+            <td><em>Auto Detected</em> <span class="small text-muted">moment format string</span></td>
+            <td>
+              <p><strong>Ember-String-Helpers</strong> will attempt to auto detect the format of the incoming string using moment.js' native <a href="http://momentjs.com/docs/#/parsing/string/" target="_blank">string parsing</a>. Manually specefy a format string for dates that do not get formatted.</p>
+            </td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+      
+      <h5 class="text-uppercase text-muted">Examples</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td><code>\{{format-date 'gibberish'}}</code></td>
+            <td>{{format-date 'gibberish'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{format-date '0000-00-00 00:00:00'}}</code></td>
+            <td>{{format-date '0000-00-00 00:00:00'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{format-date '2015-06-25 16:09:23'}}</code></td>
+            <td>{{format-date '2015-06-25 16:09:23'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{format-date '2015-06-25 16:09:23' format='MM/DD/YYYY'}}</code></td>
+            <td>{{format-date '2015-06-25 16:09:23' format='MM/DD/YYYY'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{format-date '2015-06-25 16:09:23' format='ddd, MMM Do, YYYY h:mm a'}}</code></td>
+            <td>{{format-date '2015-06-25 16:09:23' format='ddd, MMM Do, YYYY h:mm a'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{format-date '20150625160923' format='YYYY-MM-DD HH:mm:ss' inputFormat='YYYYMMDDHHmmss'}}</code></td>
+            <td>{{format-date '20150625160923' format='YYYY-MM-DD HH:mm:ss' inputFormat='YYYYMMDDHHmmss'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{format-date 'now' format='dddd, MMMM Do YYYY h:mm a'}}</code></td>
+            <td>{{format-date 'now' format='dddd, MMMM Do YYYY h:mm a'}}</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+  
+  
+  <div class="panel panel-default" id="helper-uc-words">
+    <div class="panel-heading">
+      <div class="panel-title">Upper Case Words</div>
+    </div>
+    
+    <div class="panel-body">
+      <h5 class="text-uppercase text-muted">Parameters</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Param</th>
+            <th style="width: 15%;">Default <span class="small text-muted">type</span></th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th><code>string</code></th>
+            <td><code>""</code> <span class="small text-muted">string</span></td>
+            <td>The string to be formatted.</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+      
+      <h5 class="text-uppercase text-muted">Hashed Params</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th style="width: 15%;">Param</th>
+            <th style="width: 45%;">Default <span class="small text-muted">type</span></th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th><code>force</code></th>
+            <td><code>false</code> <span class="small text-muted">boolean</span></td>
+            <td>If <code>true</code> the string will be converted to lower case first.</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+      
+      <h5 class="text-uppercase text-muted">Examples</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td><code>\{{uc-words 'hello world'}}</code></td>
+            <td>{{uc-words 'hello world'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{uc-words 'HELLO WORLD'}}</code></td>
+            <td>{{uc-words 'HELLO WORLD'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{uc-words 'HELLO WORLD' force=true}}</code></td>
+            <td>{{uc-words 'HELLO WORLD' force=true}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{uc-words 'heLlO wOrlD'}}</code></td>
+            <td>{{uc-words 'heLlO wOrlD'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{uc-words 'heLlO wOrlD' force=true}}</code></td>
+            <td>{{uc-words 'heLlO wOrlD' force=true}}</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+  
+  
+  <div class="panel panel-default" id="helper-lower-case">
+    <div class="panel-heading">
+      <div class="panel-title">Lower Case</div>
+    </div>
+    
+    <div class="panel-body">
+      <h5 class="text-uppercase text-muted">Parameters</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Param</th>
+            <th style="width: 15%;">Default <span class="small text-muted">type</span></th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th><code>string</code></th>
+            <td><code>""</code> <span class="small text-muted">string</span></td>
+            <td>The string to be formatted.</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+      
+      <h5 class="text-uppercase text-muted">Examples</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td><code>\{{lower-case 'hello world'}}</code></td>
+            <td>{{lower-case 'hello world'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{lower-case 'HELLO WORLD'}}</code></td>
+            <td>{{lower-case 'HELLO WORLD'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{lower-case 'HELLO WORLD' force=true}}</code></td>
+            <td>{{lower-case 'HELLO WORLD' force=true}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{lower-case 'heLlO wOrlD'}}</code></td>
+            <td>{{lower-case 'heLlO wOrlD'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{lower-case 'heLlO wOrlD' force=true}}</code></td>
+            <td>{{lower-case 'heLlO wOrlD' force=true}}</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+  
+  
+  <div class="panel panel-default" id="helper-upper-case">
+    <div class="panel-heading">
+      <div class="panel-title">Upper Case</div>
+    </div>
+    
+    <div class="panel-body">
+      <h5 class="text-uppercase text-muted">Parameters</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Param</th>
+            <th style="width: 15%;">Default <span class="small text-muted">type</span></th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th><code>string</code></th>
+            <td><code>""</code> <span class="small text-muted">string</span></td>
+            <td>The string to be formatted.</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+      
+      <h5 class="text-uppercase text-muted">Examples</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td><code>\{{upper-case 'hello world'}}</code></td>
+            <td>{{upper-case 'hello world'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{upper-case 'HELLO WORLD'}}</code></td>
+            <td>{{upper-case 'HELLO WORLD'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{upper-case 'HELLO WORLD' force=true}}</code></td>
+            <td>{{upper-case 'HELLO WORLD' force=true}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{upper-case 'heLlO wOrlD'}}</code></td>
+            <td>{{upper-case 'heLlO wOrlD'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{upper-case 'heLlO wOrlD' force=true}}</code></td>
+            <td>{{upper-case 'heLlO wOrlD' force=true}}</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+  
+  
+  <div class="panel panel-default" id="helper-regexp-replace">
+    <div class="panel-heading">Regexp Replace</div>
+    
+    <div class="panel-body">
+      <h5 class="text-uppercase text-muted">Parameters</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Param</th>
+            <th style="width: 15%;">Default <span class="small text-muted">type</span></th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th><code>string</code></th>
+            <td><code>""</code> <span class="small text-muted">string</span></td>
+            <td>The string to perform the replacement on.</td>
+          </tr>
+          <tr>
+            <th><code>regex</code></th>
+            <td><code>""</code> <span class="small text-muted">regular expression string</span></td>
+            <td>The regular expression to be replaced by <code>replacePattern</code>.</td>
+          </tr>
+          <tr>
+            <th><code>replacePattern</code></th>
+            <td><code>""</code> <span class="small text-muted">regular expression string</span></td>
+            <td>The regular expression replacement pattern to replace <code>regex</code>.</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+      
+      <h5 class="text-uppercase text-muted">Examples</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td><code>\{{upper-case 'hello world'}}</code></td>
+            <td>{{upper-case 'hello world'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{upper-case 'HELLO WORLD'}}</code></td>
+            <td>{{upper-case 'HELLO WORLD'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{upper-case 'HELLO WORLD' force=true}}</code></td>
+            <td>{{upper-case 'HELLO WORLD' force=true}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{upper-case 'heLlO wOrlD'}}</code></td>
+            <td>{{upper-case 'heLlO wOrlD'}}</td>
+          </tr>
+          <tr>
+            <td><code>\{{upper-case 'heLlO wOrlD' force=true}}</code></td>
+            <td>{{upper-case 'heLlO wOrlD' force=true}}</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
     </div>
   </div>
 </div>

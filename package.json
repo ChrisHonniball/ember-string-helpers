@@ -46,7 +46,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "defaultBlueprint": "ember-string-helper",
     "demoUrl": "https://chrishonniball.github.io/ember-string-helpers"
   }
 }
