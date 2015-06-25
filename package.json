@@ -1,7 +1,7 @@
 {
   "name": "ember-string-helpers",
   "version": "0.0.1",
-  "description": "Use various string functions in your ember templates.",
+  "description": "Use various string helpers in your Ember CLI application templates.",
   "directories": {
     "doc": "doc",
     "test": "tests"

@@ -529,7 +529,9 @@
   
   
   <div class="panel panel-default" id="helper-regexp-replace">
-    <div class="panel-heading">Regexp Replace</div>
+    <div class="panel-heading">
+      <div class="panel-title">Regexp Replace</div>
+    </div>
     
     <div class="panel-body">
       <h5 class="text-uppercase text-muted">Parameters</h5>
@@ -537,7 +539,7 @@
         <thead>
           <tr>
             <th style="width: 25%;">Param</th>
-            <th style="width: 15%;">Default <span class="small text-muted">type</span></th>
+            <th style="width: 25%;">Default <span class="small text-muted">type</span></th>
             <th>Description</th>
           </tr>
         </thead>
@@ -550,13 +552,42 @@
           </tr>
           <tr>
             <th><code>regex</code></th>
-            <td><code>""</code> <span class="small text-muted">regular expression string</span></td>
-            <td>The regular expression to be replaced by <code>replacePattern</code>.</td>
+            <td><code>""</code> <span class="small text-muted">regular expression or string</span></td>
+            <td>The regular expression to be replaced by <code>replacePattern</code>. You can send this parameter with <em>or</em> without the surrounding <code>/</code>. <strong>Do not</strong> include flags in the string. Use the <code>flags</code> hash instead.</td>
           </tr>
           <tr>
             <th><code>replacePattern</code></th>
-            <td><code>""</code> <span class="small text-muted">regular expression string</span></td>
+            <td><code>""</code> <span class="small text-muted">regular expression or string</span></td>
             <td>The regular expression replacement pattern to replace <code>regex</code>.</td>
+          </tr>
+        </tbody>
+        
+        <tfoot><tr><td colspan="3"></td></tr></tfoot>
+      </table>
+      
+      <h5 class="text-uppercase text-muted">Hashed Params</h5>
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th style="width: 15%;">Param</th>
+            <th style="width: 45%;">Default <span class="small text-muted">type</span></th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th><code>flags</code></th>
+            <td><code>null</code> <span class="small text-muted">string</span></td>
+            <td>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank"><code>String.prototype.replace()</code></a> native flags. If specified, flags can have any combination of the following values:
+
+              <ul>
+                <li><strong>g</strong> &ndash; global match</li>
+                <li><strong>i</strong> &ndash; ignore case</li>
+                <li><strong>m</strong> &ndash; multiline</li>
+              </ul>
+            </td>
           </tr>
         </tbody>
         
@@ -574,24 +605,20 @@
         
         <tbody>
           <tr>
-            <td><code>\{{upper-case 'hello world'}}</code></td>
-            <td>{{upper-case 'hello world'}}</td>
+            <td><code>\{{regexp-replace 'some long statement' '/ /' '_' flags='g'}}</code></td>
+            <td>{{regexp-replace 'some long statement' '/ /' '_' flags='g'}}</td>
           </tr>
           <tr>
-            <td><code>\{{upper-case 'HELLO WORLD'}}</code></td>
-            <td>{{upper-case 'HELLO WORLD'}}</td>
+            <td><code>\{{regexp-replace 'I love foo!' '/foo/' 'bar'}}</code></td>
+            <td>{{regexp-replace 'I love foo!' '/foo/' 'bar'}}</td>
           </tr>
           <tr>
-            <td><code>\{{upper-case 'HELLO WORLD' force=true}}</code></td>
-            <td>{{upper-case 'HELLO WORLD' force=true}}</td>
+            <td><code>\{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the'}}</code></td>
+            <td>{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the'}}</td>
           </tr>
           <tr>
-            <td><code>\{{upper-case 'heLlO wOrlD'}}</code></td>
-            <td>{{upper-case 'heLlO wOrlD'}}</td>
-          </tr>
-          <tr>
-            <td><code>\{{upper-case 'heLlO wOrlD' force=true}}</code></td>
-            <td>{{upper-case 'heLlO wOrlD' force=true}}</td>
+            <td><code>\{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the' flags='g'}}</code></td>
+            <td>{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the' flags='g'}}</td>
           </tr>
         </tbody>
         
