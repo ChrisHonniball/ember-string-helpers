@@ -1,7 +1,7 @@
 {
   "name": "ember-string-helpers",
-  "version": "0.0.1",
-  "description": "Use various string helpers in your Ember CLI application templates.",
+  "version": "0.0.2",
+  "description": "Add a collection of string helpers for you to use in your templates.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -15,7 +15,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Chris Honniball",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
@@ -37,9 +37,7 @@
   },
   "keywords": [
     "ember-addon",
-    "string",
-    "templates",
-    "helpers"
+    "string"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.0.0"

@@ -1,15 +1,71 @@
+{{! markers need to be placed in sections above desired navigation section to compensate for the navbar! }}
+
+<div id="purpose" role="marker" style="height: 70px;"></div>
+
+<nav id="nav" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="https://github.com/ChrisHonniball/ember-string-helpers">ember-string-helpers</a>
+    </div>
+    
+    <ul class="nav navbar-nav">
+      <li><a href="#purpose">Purpose</a></li>
+      <li><a href="#installation">Installation</a></li>
+      <li><a href="#project-status">Project Status</a></li>
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+  </div>
+</nav>
+
 <div class="col-lg-10 col-lg-offset-1 col-md-12">
-  <h2 id="title">Ember-String-Helpers</h2>
+  <h2>Purpose</h2>
+  <p class="lead">
+    <code>ember-string-helpers</code> will add a collection of string helpers for you to use in your templates. These helpers will help you easily format strings in order to avoid needing a computed property.
+  </p>
   
-  <p class="lead">Use various string helpers in your Ember CLI application templates.</p>
-  
-  {{partial 'navigation'}}
-  
-  <h3>Installation</h3>
-  
+  <div id="installation" role="marker"></div>
+</div>
+
+<div class="clearfix"></div>
+<hr class="row">
+
+<div class="col-lg-10 col-lg-offset-1 col-md-12">
+  <h2>Installation</h2>
   <pre>ember install ember-string-helpers</pre>
   
-  <hr>
+  <div id="project-status" role="marker"></div>
+</div>
+
+<div class="clearfix"></div>
+<hr class="row">
+
+<div class="col-lg-10 col-lg-offset-1 col-md-12">
+  <h2>Project Status</h2>
+  <p class="lead">
+    <span class="label label-danger">Rapid Development</span>&nbsp;
+    This addon <em>will</em> change rapidly at this stage and <em>may</em> not be fully functional.
+    
+    {{!
+    <span class="label label-success">Stable</span>&nbsp;
+    <a href="https://github.com/ChrisHonniball/ember-string-helpers/releases/latest">Stable version released</a>. All additional development will be tagged as a new release.
+    }}
+  </p>
+  
+  <div id="examples" role="marker"></div>
+</div>
+
+<div class="clearfix"></div>
+<hr class="row">
+
+<div class="col-lg-10 col-lg-offset-1 col-md-12">
+  <h2>Examples</h2>
   
   <div class="panel panel-default" id="helper-format-phone">
     <div class="panel-heading">
@@ -604,4 +660,12 @@
       </table>
     </div>
   </div>
+
+</div>
+
+<div class="clearfix"></div>
+<hr class="row">
+
+<div class="col-xs-12 text-center lead">
+  Created by <a href="https://github.com/ChrisHonniball">@ChrisHonniball</a>
 </div>
