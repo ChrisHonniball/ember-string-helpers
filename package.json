@@ -1,6 +1,6 @@
 {
   "name": "ember-string-helpers",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Add a collection of string helpers for you to use in your templates.",
   "directories": {
     "doc": "doc",
@@ -39,7 +39,15 @@
   },
   "keywords": [
     "ember-addon",
-    "string"
+    "string",
+    "number_format",
+    "strtoupper",
+    "strtolower",
+    "replace",
+    "preg_replace",
+    "uc_words",
+    "date",
+    "phone"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.0.0"

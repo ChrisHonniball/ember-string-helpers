@@ -277,22 +277,22 @@
       </dl>
       
       <h5 class="text-uppercase text-muted">Examples</h5>
-      <dl class="dl-horizontal">
-        <td><code>\{{uc-words 'hello world'}}</code></td>
-        <td>{{uc-words 'hello world'}}</td>
+      {{#ember-highlight-code}}
+        \{{uc-words 'hello world'}}
+        // output: {{uc-words 'hello world'}}
         
-        <td><code>\{{uc-words 'HELLO WORLD'}}</code></td>
-        <td>{{uc-words 'HELLO WORLD'}}</td>
+        \{{uc-words 'HELLO WORLD'}}
+        // output: {{uc-words 'HELLO WORLD'}}
         
-        <td><code>\{{uc-words 'HELLO WORLD' force=true}}</code></td>
-        <td>{{uc-words 'HELLO WORLD' force=true}}</td>
+        \{{uc-words 'HELLO WORLD' force=true}}
+        // output: {{uc-words 'HELLO WORLD' force=true}}
         
-        <td><code>\{{uc-words 'heLlO wOrlD'}}</code></td>
-        <td>{{uc-words 'heLlO wOrlD'}}</td>
+        \{{uc-words 'heLlO wOrlD'}}
+        // output: {{uc-words 'heLlO wOrlD'}}
         
-        <td><code>\{{uc-words 'heLlO wOrlD' force=true}}</code></td>
-        <td>{{uc-words 'heLlO wOrlD' force=true}}</td>
-      </dl>
+        \{{uc-words 'heLlO wOrlD' force=true}}
+        // output: {{uc-words 'heLlO wOrlD' force=true}}
+      {{/ember-highlight-code}}
     </div>
   </div>
   
@@ -304,48 +304,21 @@
     
     <div class="panel-body">
       <h5 class="text-uppercase text-muted">Parameters</h5>
-      <table class="table table-condensed table-hover">
-        <thead>
-          <tr>
-            <th style="width: 25%;">Param</th>
-            <th style="width: 15%;">Default <span class="small text-muted">type</span></th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        
-        <tbody>
-          <tr>
-            <th><code>string</code></th>
-            <td><code>""</code> <span class="small text-muted">string</span></td>
-            <td>The string to be formatted.</td>
-          </tr>
-        </tbody>
-        
-        <tfoot><tr><td colspan="3"></td></tr></tfoot>
-      </table>
+      <dl class="dl-horizontal">
+        <dt>string</dt>
+        <dd>The string to be formatted.</dd>
+        <dt><span class="small text-muted">string</span></dt>
+        <dd><code>""</code></dd>
+      </dl>
       
       <h5 class="text-uppercase text-muted">Examples</h5>
-      <table class="table table-condensed table-hover">
-        <thead>
-          <tr>
-            <th>Code</th>
-            <th>Output</th>
-          </tr>
-        </thead>
+      {{#ember-highlight-code}}
+        \{{lower-case 'HELLO WORLD'}}
+        // output: {{lower-case 'HELLO WORLD'}}
         
-        <tbody>
-          <tr>
-            <td><code>\{{lower-case 'HELLO WORLD'}}</code></td>
-            <td>{{lower-case 'HELLO WORLD'}}</td>
-          </tr>
-          <tr>
-            <td><code>\{{lower-case 'heLlO wOrlD'}}</code></td>
-            <td>{{lower-case 'heLlO wOrlD'}}</td>
-          </tr>
-        </tbody>
-        
-        <tfoot><tr><td colspan="3"></td></tr></tfoot>
-      </table>
+        \{{lower-case 'heLlO wOrlD'}}
+        // output: {{lower-case 'heLlO wOrlD'}}
+      {{/ember-highlight-code}}
     </div>
   </div>
   
@@ -357,48 +330,21 @@
     
     <div class="panel-body">
       <h5 class="text-uppercase text-muted">Parameters</h5>
-      <table class="table table-condensed table-hover">
-        <thead>
-          <tr>
-            <th style="width: 25%;">Param</th>
-            <th style="width: 15%;">Default <span class="small text-muted">type</span></th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        
-        <tbody>
-          <tr>
-            <th><code>string</code></th>
-            <td><code>""</code> <span class="small text-muted">string</span></td>
-            <td>The string to be formatted.</td>
-          </tr>
-        </tbody>
-        
-        <tfoot><tr><td colspan="3"></td></tr></tfoot>
-      </table>
+      <dl class="dl-horizontal">
+        <dt>string</dt>
+        <dd>The string to be formatted.</dd>
+        <dt><span class="small text-muted">string</span></dt>
+        <dd><code>""</code></dd>
+      </dl>
       
       <h5 class="text-uppercase text-muted">Examples</h5>
-      <table class="table table-condensed table-hover">
-        <thead>
-          <tr>
-            <th>Code</th>
-            <th>Output</th>
-          </tr>
-        </thead>
+      {{#ember-highlight-code}}
+        \{{upper-case 'hello world'}}
+        // output: {{upper-case 'hello world'}}
         
-        <tbody>
-          <tr>
-            <td><code>\{{upper-case 'hello world'}}</code></td>
-            <td>{{upper-case 'hello world'}}</td>
-          </tr>
-          <tr>
-            <td><code>\{{upper-case 'heLlO wOrlD'}}</code></td>
-            <td>{{upper-case 'heLlO wOrlD'}}</td>
-          </tr>
-        </tbody>
-        
-        <tfoot><tr><td colspan="3"></td></tr></tfoot>
-      </table>
+        \{{upper-case 'heLlO wOrlD'}}
+        // output: {{upper-case 'heLlO wOrlD'}}
+      {{/ember-highlight-code}}
     </div>
   </div>
   
@@ -410,95 +356,57 @@
     
     <div class="panel-body">
       <h5 class="text-uppercase text-muted">Parameters</h5>
-      <table class="table table-condensed table-hover">
-        <thead>
-          <tr>
-            <th style="width: 25%;">Param</th>
-            <th style="width: 25%;">Default <span class="small text-muted">type</span></th>
-            <th>Description</th>
-          </tr>
-        </thead>
+      <dl class="dl-horizontal">
+        <dt>string</dt>
+        <dd>The string to perform the replacement on.</dd>
+        <dt><span class="small text-muted">string</span></dt>
+        <dd><code>""</code></dd>
         
-        <tbody>
-          <tr>
-            <th><code>string</code></th>
-            <td><code>""</code> <span class="small text-muted">string</span></td>
-            <td>The string to perform the replacement on.</td>
-          </tr>
-          <tr>
-            <th><code>regex</code></th>
-            <td><code>""</code> <span class="small text-muted">regular expression or string</span></td>
-            <td>The regular expression to be replaced by <code>replacePattern</code>. You can send this parameter with <em>or</em> without the surrounding <code>/</code>. <strong>Do not</strong> include flags in the string. Use the <code>flags</code> hash instead.</td>
-          </tr>
-          <tr>
-            <th><code>replacePattern</code></th>
-            <td><code>""</code> <span class="small text-muted">regular expression or string</span></td>
-            <td>The regular expression replacement pattern to replace <code>regex</code>.</td>
-          </tr>
-        </tbody>
+        <dd class="clearfix">&nbsp;</dd>
         
-        <tfoot><tr><td colspan="3"></td></tr></tfoot>
-      </table>
+        <dt>regex</dt>
+        <dd>The regular expression to be replaced by <code>replacePattern</code>. You can send this parameter with <em>or</em> without the surrounding <code>/</code>. <strong>Do not</strong> include flags in the string. Use the <code>flags</code> hash instead.</dd>
+        <dt><span class="small text-muted">regular expression or string</span></dt>
+        <dd><code>""</code></dd>
+        
+        <dd class="clearfix">&nbsp;</dd>
+        
+        <dt>replacePattern</dt>
+        <dd>The regular expression replacement pattern to replace.</dd>
+        <dt><span class="small text-muted">regular expression or string</span></dt>
+        <dd><code>""</code></dd>
+      </dl>
       
       <h5 class="text-uppercase text-muted">Hashed Params</h5>
-      <table class="table table-condensed table-hover">
-        <thead>
-          <tr>
-            <th style="width: 15%;">Param</th>
-            <th style="width: 45%;">Default <span class="small text-muted">type</span></th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        
-        <tbody>
-          <tr>
-            <th><code>flags</code></th>
-            <td><code>null</code> <span class="small text-muted">string</span></td>
-            <td>
-              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank"><code>String.prototype.replace()</code></a> native flags. If specified, flags can have any combination of the following values:
+      <dl class="dl-horizontal">
+        <dt>flags</dt>
+        <dd>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank"><code>String.prototype.replace()</code></a> native flags. If specified, flags can have any combination of the following values:
 
-              <ul>
-                <li><strong>g</strong> &ndash; global match</li>
-                <li><strong>i</strong> &ndash; ignore case</li>
-                <li><strong>m</strong> &ndash; multiline</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-        
-        <tfoot><tr><td colspan="3"></td></tr></tfoot>
-      </table>
+          <ul>
+            <li><strong>g</strong> &ndash; global match</li>
+            <li><strong>i</strong> &ndash; ignore case</li>
+            <li><strong>m</strong> &ndash; multiline</li>
+          </ul>
+        </dd>
+        <dt><span class="small text-muted">string</span></dt>
+        <dd><code>null</code></dd>
+      </dl>
       
       <h5 class="text-uppercase text-muted">Examples</h5>
-      <table class="table table-condensed table-hover">
-        <thead>
-          <tr>
-            <th>Code</th>
-            <th>Output</th>
-          </tr>
-        </thead>
+      {{#ember-highlight-code}}
+        \{{regexp-replace 'some long statement' '/ /' '_' flags='g'}}
+        // output: {{regexp-replace 'some long statement' '/ /' '_' flags='g'}}
         
-        <tbody>
-          <tr>
-            <td><code>\{{regexp-replace 'some long statement' '/ /' '_' flags='g'}}</code></td>
-            <td>{{regexp-replace 'some long statement' '/ /' '_' flags='g'}}</td>
-          </tr>
-          <tr>
-            <td><code>\{{regexp-replace 'I love foo!' '/foo/' 'bar'}}</code></td>
-            <td>{{regexp-replace 'I love foo!' '/foo/' 'bar'}}</td>
-          </tr>
-          <tr>
-            <td><code>\{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the'}}</code></td>
-            <td>{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the'}}</td>
-          </tr>
-          <tr>
-            <td><code>\{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the' flags='g'}}</code></td>
-            <td>{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the' flags='g'}}</td>
-          </tr>
-        </tbody>
+        \{{regexp-replace 'I love foo!' '/foo/' 'bar'}}
+        // output: {{regexp-replace 'I love foo!' '/foo/' 'bar'}}
         
-        <tfoot><tr><td colspan="3"></td></tr></tfoot>
-      </table>
+        \{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the'}}
+        // output: {{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the'}}
+        
+        \{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the' flags='g'}}
+        // output: {{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the' flags='g'}}
+      {{/ember-highlight-code}}
     </div>
   </div>
 </div>
