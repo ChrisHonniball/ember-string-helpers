@@ -15,4 +15,4 @@ export function formatPhone(params/*, hash*/) {
   return String(phone).replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
 }
 
-export default Ember.HTMLBars.makeBoundHelper(formatPhone);
+export default Ember.Helper.helper(formatPhone);

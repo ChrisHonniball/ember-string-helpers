@@ -13,4 +13,4 @@ export function ucWords(params, hash) {
   });
 }
 
-export default Ember.HTMLBars.makeBoundHelper(ucWords);
+export default Ember.Helper.helper(ucWords);

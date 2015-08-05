@@ -27,4 +27,4 @@ export function formatDate(params, hash) {
   return formattedDate;
 }
 
-export default Ember.HTMLBars.makeBoundHelper(formatDate);
+export default Ember.Helper.helper(formatDate);

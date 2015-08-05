@@ -10,4 +10,4 @@ export function regexpReplace(params, hash) {
   return string.replace(regexPattern, replacePattern);
 }
 
-export default Ember.HTMLBars.makeBoundHelper(regexpReplace);
+export default Ember.Helper.helper(regexpReplace);

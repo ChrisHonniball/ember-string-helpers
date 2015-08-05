@@ -25,4 +25,4 @@ export function numberFormat(params, hash) {
 	return formattedNum;
 }
 
-export default Ember.HTMLBars.makeBoundHelper(numberFormat);
+export default Ember.Helper.helper(numberFormat);
