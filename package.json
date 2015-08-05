@@ -1,6 +1,6 @@
 {
   "name": "ember-string-helpers",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Add a collection of string helpers for you to use in your templates.",
   "directories": {
     "doc": "doc",
