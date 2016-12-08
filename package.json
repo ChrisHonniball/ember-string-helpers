@@ -2,44 +2,6 @@
   "name": "ember-string-helpers",
   "version": "0.0.9",
   "description": "Add a collection of string helpers for you to use in your templates.",
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
-  "scripts": {
-    "start": "ember server",
-    "build": "ember build",
-    "test": "ember try:testall"
-  },
-  "repository": "https://github.com/ChrisHonniball/ember-string-helpers",
-  "engines": {
-    "node": ">= 0.10.0"
-  },
-  "author": "Chris Honniball",
-  "license": "MIT",
-  "devDependencies": {
-    "broccoli-asset-rev": "^2.0.2",
-    "broccoli-funnel": "^0.2.3",
-    "ember-cli": "1.13.7",
-    "ember-cli-app-version": "0.4.0",
-    "ember-cli-content-security-policy": "0.4.0",
-    "ember-cli-dependency-checker": "^1.0.0",
-    "ember-cli-github-pages": "0.0.6",
-    "ember-cli-htmlbars": "0.7.9",
-    "ember-cli-htmlbars-inline-precompile": "^0.1.1",
-    "ember-cli-ic-ajax": "0.2.1",
-    "ember-cli-inject-live-reload": "^1.3.0",
-    "ember-cli-qunit": "0.3.20",
-    "ember-cli-release": "0.2.3",
-    "ember-cli-sri": "^1.0.1",
-    "ember-cli-uglify": "^1.0.1",
-    "ember-data": "1.13.7",
-    "ember-disable-proxy-controllers": "^1.0.0",
-    "ember-export-application-global": "^1.0.3",
-    "ember-disable-prototype-extensions": "^1.0.0",
-    "ember-highlight-code": "0.0.7",
-    "ember-try": "0.0.6"
-  },
   "keywords": [
     "ember-addon",
     "string",
@@ -52,8 +14,45 @@
     "date",
     "phone"
   ],
+  "license": "MIT",
+  "author": "",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "repository": "",
+  "scripts": {
+    "build": "ember build",
+    "start": "ember server",
+    "test": "ember try:each"
+  },
   "dependencies": {
     "ember-cli-babel": "^5.0.0"
+  },
+  "devDependencies": {
+    "broccoli-asset-rev": "^2.4.5",
+    "ember-ajax": "^2.4.1",
+    "ember-cli": "^2.8.0",
+    "ember-cli-app-version": "^2.0.0",
+    "ember-cli-dependency-checker": "^1.3.0",
+    "ember-cli-github-pages": "0.1.2",
+    "ember-cli-htmlbars": "^1.1.1",
+    "ember-cli-htmlbars-inline-precompile": "^0.3.6",
+    "ember-cli-inject-live-reload": "^1.4.1",
+    "ember-cli-jshint": "^2.0.1",
+    "ember-cli-moment-shim": "3.0.0",
+    "ember-cli-qunit": "^3.0.1",
+    "ember-cli-release": "^0.2.9",
+    "ember-cli-sri": "^2.1.0",
+    "ember-cli-test-loader": "^1.1.0",
+    "ember-cli-uglify": "^1.2.0",
+    "ember-data": "^2.8.0",
+    "ember-disable-prototype-extensions": "^1.1.0",
+    "ember-export-application-global": "^1.0.5",
+    "ember-highlight-code": "0.0.8",
+    "ember-load-initializers": "^0.6.3",
+    "ember-resolver": "^2.0.3",
+    "loader.js": "^4.0.10"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",

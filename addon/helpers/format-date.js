@@ -1,11 +1,12 @@
 import Ember from 'ember';
+import moment from 'moment';
 
 export function formatDate(params, hash) {
   var date = params[0], formattedDate,
     inputFormat = hash.inputFormat,
     mDate = (date === 'now') ? moment() : moment(date, inputFormat),
     format = hash.format || "dddd, MMMM Do YYYY, h:mm a";
-  
+
   if(typeof moment === 'undefined'){
     console.log(
       "%c{{format-date}} moment is undefined. Formatting disabled.",
@@ -13,7 +14,7 @@ export function formatDate(params, hash) {
     );
     return date;
   }
-  
+
   if(!mDate.isValid()) {
     console.log(
       "%c{{format-date}} invalid date.",
@@ -21,9 +22,9 @@ export function formatDate(params, hash) {
     );
     return date;
   }
-  
+
   formattedDate = mDate.format(format);
-  
+
   return formattedDate;
 }
 
