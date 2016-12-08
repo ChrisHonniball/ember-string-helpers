@@ -30,3 +30,8 @@ test('mixed case | force = true', function(assert) {
   var result = ucWords(['heLlO wOrlD'], {force: true});
   assert.equal(result, 'Hello World');
 });
+
+test('empty string', function(assert) {
+  var result = ucWords([''], {force: true});
+  assert.equal(result, '');
+});
