@@ -3,7 +3,7 @@ import Ember from 'ember';
 export function ucWords(params, hash) {
   var string =  String(params[0]),
     force = (hash.force === true) ? true : false;
-  
+
   if(force) {
     string = string.toLowerCase();
   }

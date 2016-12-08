@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'dummy',
     environment: environment,
-    baseURL: '/',
+    //baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -51,6 +51,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.locationType = 'hash';
+    ENV.rootURL = '/ember-string-helpers/';
     ENV.baseURL = '/ember-string-helpers';
   }
 
