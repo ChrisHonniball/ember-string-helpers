@@ -19,7 +19,7 @@ test('replace or, no global', function(assert) {
   assert.equal(result, 'I misstype the all of hte time...');
 });
 
-test('replace or, no global', function(assert) {
+test('replace or, global', function(assert) {
   var result = regexpReplace(['I misstype teh all of hte time...', 'teh|hte', 'the'], {flags:'g'});
   assert.equal(result, 'I misstype the all of the time...');
 });
