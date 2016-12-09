@@ -1,11 +1,13 @@
-import { helper } from 'ember-helper';
+import Ember from 'ember';
 
-export default helper(function([value, ...rest], opts) {
+export function substr([value, ...rest], hash) {
 	if (typeof value === 'string') {
-		let start = opts.start || 0;
-		let max = opts.max;
-		return value.substr(start, max);
+		let start = hash.start || 0;
+		let length = hash.length;
+		return value.substr(start, length);
 	} else {
 		return value;
 	}
-});
+}
+
+export default Ember.Helper.helper(substr);
