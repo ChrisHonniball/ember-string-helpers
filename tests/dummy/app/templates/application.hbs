@@ -3,412 +3,463 @@
 <div id="purpose" role="marker" style="height: 70px;"></div>
 
 <nav id="nav" class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      
-      <a class="navbar-brand" href="https://github.com/ChrisHonniball/ember-string-helpers">ember-string-helpers</a>
-    </div>
-    
-    <div class="collapse navbar-collapse" id="main-nav">
-      <ul class="nav navbar-nav">
-        <li><a href="#purpose">Purpose</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#project-status">Project Status</a></li>
-        <li><a href="#examples">Examples</a></li>
-      </ul>
-    </div>
-  </div>
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<a class="navbar-brand" href="https://github.com/ChrisHonniball/ember-string-helpers">ember-string-helpers</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="main-nav">
+			<ul class="nav navbar-nav">
+				<li><a href="#purpose">Purpose</a></li>
+				<li><a href="#installation">Installation</a></li>
+				<li><a href="#project-status">Project Status</a></li>
+				<li><a href="#examples">Examples</a></li>
+			</ul>
+		</div>
+	</div>
 </nav>
 
 <div class="col-lg-10 col-lg-offset-1 col-md-12">
-  <h2>Purpose</h2>
-  <p class="lead">
-    <code>ember-string-helpers</code> will add a collection of string helpers for you to use in your templates. These helpers will help you easily format strings in order to avoid needing a computed property.
-  </p>
-  
-  <div id="installation" role="marker"></div>
+	<h2>Purpose</h2>
+	<p class="lead">
+		<code>ember-string-helpers</code> will add a collection of string helpers for you to use in your templates. These helpers will help you easily format strings in order to avoid needing a computed property.
+	</p>
+
+	<div id="installation" role="marker"></div>
 </div>
 
 <div class="clearfix"></div>
 <hr>
 
 <div class="col-lg-10 col-lg-offset-1 col-md-12">
-  <h2>Installation</h2>
-  <pre>ember install ember-string-helpers</pre>
-  
-  <div id="project-status" role="marker"></div>
+	<h2>Installation</h2>
+	<pre>ember install ember-string-helpers</pre>
+
+	<div id="project-status" role="marker"></div>
 </div>
 
 <div class="clearfix"></div>
 <hr>
 
 <div class="col-lg-10 col-lg-offset-1 col-md-12">
-  <h2>Project Status</h2>
-  <p class="lead">
-    <span class="label label-success">Stable</span>&nbsp;
-    <a href="https://github.com/ChrisHonniball/ember-string-helpers/releases/latest">Stable version released</a>. All additional development will be tagged as a new release.
-  </p>
-  
-  <div id="examples" role="marker"></div>
+	<h2>Project Status</h2>
+	<p class="lead">
+		<span class="label label-success">Stable</span>&nbsp;
+		<a href="https://github.com/ChrisHonniball/ember-string-helpers/releases/latest">Stable version released</a>. All additional development will be tagged as a new release.
+	</p>
+
+	<div id="examples" role="marker"></div>
 </div>
 
 <div class="clearfix"></div>
 <hr>
 
 <div class="col-lg-10 col-lg-offset-1 col-md-12">
-  <h2>Examples</h2>
-  
-  <div class="panel panel-default" id="helper-format-phone">
-    <div class="panel-heading">
-      <div class="panel-title">Format Phone</div>
-    </div>
-    
-    <div class="panel-body">
-      <h5 class="text-uppercase text-muted">Supported Formats</h5>
-      <ul>
-        <li><strong>US Standard:</strong> (999) 999-9999</li>
-      </ul>
-      <h5 class="text-uppercase text-muted">Parameters</h5>
-      
-      <dl class="dl-horizontal">
-        <dt>phone</dt>
-        <dd>The phone number to be formatted.</dd>
-        <dt><span class="small text-muted">string</span></dt>
-        <dd><code>""</code></dd>
-      </dl>
-      
-      <h5 class="text-uppercase text-muted">Example</h5>
-      {{#ember-highlight-code}}
-        \{{format-phone "8661239876"}}
-        // output: {{format-phone "8661239876"}}
-      {{/ember-highlight-code}}
-    </div>
-  </div>
-  
-  <div class="panel panel-default" id="helper-number-format">
-    <div class="panel-heading">
-      <div class="panel-title">Number Format</div>
-    </div>
-    
-    <div class="panel-body">
-      <h5 class="text-uppercase text-muted">Parameters</h5>
-      <dl class="dl-horizontal">
-        <dt>number</dt>
-        <dd>The number to be formatted.</dd>
-        <dt><span class="small text-muted">string</span></dt>
-        <dd><code>""</code></dd>
-      </dl>
-      
-      <h5 class="text-uppercase text-muted">Hashed Params</h5>
-      <dl class="dl-horizontal">
-        <dt>decimals</dt>
-        <dd>The number of desired decimal places.</dd>
-        <dt><span class="small text-muted">int</span></dt>
-        <dd><code>2</code></dd>
-        
-        <div class="clearfix">&nbsp;</div>
-        
-        <dt>decimalPoint</dt>
-        <dd>The character used to separate the <abbr title="characters to the left of the decimal">chatacteristic</abbr> and the <abbr title="characters to the right of the decimal point">mantissa</abbr>.</dd>
-        <dt><span class="small text-muted">string</span></dt>
-        <dd><code>"."</code></dd>
-        
-        <div class="clearfix">&nbsp;</div>
-      
-        <dt>thousandsSeparator</dt>
-        <dd>The number of desired decimal places to round the number to.</dd>
-        <dt><span class="small text-muted">string</span></dt>
-        <dd><code>","</code></dd>
-        
-        <div class="clearfix">&nbsp;</div>
-      
-        <dt>trimZeros</dt>
-        <dd>The number of desired decimal places to round the number to.</dd>
-        <dt><span class="small text-muted">boolean</span></dt>
-        <dd><code>false</code></dd>
-      </dl>
-      
-      <h5 class="text-uppercase text-muted">Examples</h5>
-      {{#ember-highlight-code}}
-        \{{number-format '1234.56'}}
-        // outputs: {{number-format '1234.56'}}
+	<h2>Examples</h2>
 
-        \{{number-format '1234.56' decimals=2 decimalPoint=',' thousandsSeparator=' '}}
-        // outputs: {{number-format '1234.56' decimals=2 decimalPoint=',' thousandsSeparator=' '}}
+	<div class="panel panel-default" id="helper-format-phone">
+		<div class="panel-heading">
+			<div class="panel-title">Format Phone</div>
+		</div>
 
-        \{{number-format '1234.5678' decimals=2 decimalPoint='.' thousandsSeparator=''}}
-        // outputs: {{number-format '1234.5678' decimals=2 decimalPoint='.' thousandsSeparator=''}}
+		<div class="panel-body">
+			<h5 class="text-uppercase text-muted">Supported Formats</h5>
+			<ul>
+				<li><strong>US Standard:</strong> (999) 999-9999</li>
+			</ul>
+			<h5 class="text-uppercase text-muted">Parameters</h5>
 
-        \{{number-format '67' decimals=2 decimalPoint=',' thousandsSeparator='.'}}
-        // outputs: {{number-format '67' decimals=2 decimalPoint=',' thousandsSeparator='.'}}
+			<dl class="dl-horizontal">
+				<dt>phone</dt>
+				<dd>The phone number to be formatted.</dd>
+				<dt><span class="small text-muted">string</span></dt>
+				<dd><code>""</code></dd>
+			</dl>
 
-        \{{number-format '1000'}}
-        // outputs: {{number-format '1000'}}
+			<h5 class="text-uppercase text-muted">Example</h5>
+			{{#ember-highlight-code}}
+			\{{format-phone "8661239876"}}
+			// output: {{format-phone "8661239876"}}
+			{{/ember-highlight-code}}
+		</div>
+	</div>
 
-        \{{number-format '67.311' decimals=2}}
-        // outputs: {{number-format '67.311' decimals=2}}
+	<div class="panel panel-default" id="helper-number-format">
+		<div class="panel-heading">
+			<div class="panel-title">Number Format</div>
+		</div>
 
-        \{{number-format '1000.55' decimals=1}}
-        // outputs: {{number-format '1000.55' decimals=1}}
+		<div class="panel-body">
+			<h5 class="text-uppercase text-muted">Parameters</h5>
+			<dl class="dl-horizontal">
+				<dt>number</dt>
+				<dd>The number to be formatted.</dd>
+				<dt><span class="small text-muted">string</span></dt>
+				<dd><code>""</code></dd>
+			</dl>
 
-        \{{number-format '67000' decimals=5 decimalPoint=',' thousandsSeparator='.'}}
-        // outputs: {{number-format '67000' decimals=5 decimalPoint=',' thousandsSeparator='.'}}
+			<h5 class="text-uppercase text-muted">Hashed Params</h5>
+			<dl class="dl-horizontal">
+				<dt>decimals</dt>
+				<dd>The number of desired decimal places.</dd>
+				<dt><span class="small text-muted">int</span></dt>
+				<dd><code>2</code></dd>
 
-        \{{number-format '0.9' decimals=0}}
-        // outputs: {{number-format '0.9' decimals=0}}
+				<div class="clearfix">&nbsp;</div>
 
-        \{{number-format '1.20' decimals=2}}
-        // outputs: {{number-format '1.20' decimals=2}}
+				<dt>decimalPoint</dt>
+				<dd>The character used to separate the <abbr title="characters to the left of the decimal">chatacteristic</abbr> and the <abbr title="characters to the right of the decimal point">mantissa</abbr>.</dd>
+				<dt><span class="small text-muted">string</span></dt>
+				<dd><code>"."</code></dd>
 
-        \{{number-format '1.20' decimals=4}}
-        // outputs: {{number-format '1.20' decimals=4}}
+				<div class="clearfix">&nbsp;</div>
 
-        \{{number-format '1.20' decimals=2 trimZeros=true}}
-        // outputs: {{number-format '1.20' decimals=2 trimZeros=true}}
+				<dt>thousandsSeparator</dt>
+				<dd>The number of desired decimal places to round the number to.</dd>
+				<dt><span class="small text-muted">string</span></dt>
+				<dd><code>","</code></dd>
 
-        \{{number-format '1.20' decimals=4 trimZeros=true}}
-        // outputs: {{number-format '1.20' decimals=4 trimZeros=true}}
+				<div class="clearfix">&nbsp;</div>
 
-        \{{number-format '1.2000' decimals=3}}
-        // outputs: {{number-format '1.2000' decimals=3}}
+				<dt>trimZeros</dt>
+				<dd>The number of desired decimal places to round the number to.</dd>
+				<dt><span class="small text-muted">boolean</span></dt>
+				<dd><code>false</code></dd>
+			</dl>
 
-        \{{number-format '1 000,50' decimals=2 decimalPoint='.' thousandsSeparator=' '}}
-        // outputs: {{number-format '1 000,50' decimals=2 decimalPoint='.' thousandsSeparator=' '}}
+			<h5 class="text-uppercase text-muted">Examples</h5>
+			{{#ember-highlight-code}}
+			\{{number-format '1234.56'}}
+			// outputs: {{number-format '1234.56'}}
 
-        \{{number-format '1e-8' decimals=8 decimalPoint='.' thousandsSeparator=''}}
-        // outputs: {{number-format '1e-8' decimals=8 decimalPoint='.' thousandsSeparator=''}}
-      {{/ember-highlight-code}}
-    </div>
-  </div>
-  
-  <div class="panel panel-default" id="helper-format-date">
-    <div class="panel-heading">
-      <div class="panel-title">Format Date</div>
-    </div>
-    
-    <div class="panel-body">
-      <h5 class="text-uppercase text-muted">Supported Formats</h5>
-      <ul>
-        <li>Any <a href="http://moment.js" target="_blank">moment.js</a> supported format. <a href="http://momentjs.com/docs/#/displaying/format/" target="_blank">Moment.js formatting docs</a></li>
-      </ul>
-      
-      <h5 class="text-uppercase text-muted">Parameters</h5>
-      <dl class="dl-horizontal">
-        <dt>date</dt>
-        <dd>The date to be formatted.</dd>
-        <dt><span class="small text-muted">string</span></dt>
-        <dd><code>""</code></dd>
-      </dl>
-      
-      <h5 class="text-uppercase text-muted">Hashed Params</h5>
-      
-      <dl class="dl-horizontal">
-        <dt>format</dt>
-        <dd>The desired output format of the date.</dd>
-        <dt><span class="small text-muted">moment.js format string</span></dt>
-        <dd><code>"dddd, MMMM Do YYYY, h:mm a"</code></dd>
-        
-        <dd class="clearfix">&nbsp;</dd>
-        
-        <dt>inputFormat</dt>
-        <dd><strong>Ember-String-Helpers</strong> will attempt to auto detect the format of the incoming string using moment.js' native <a href="http://momentjs.com/docs/#/parsing/string/" target="_blank">string parsing</a>. Manually specefy a format string for dates that do not get formatted.</dd>
-        <dt><span class="small text-muted">moment.js format string</span></dt>
-        <dd><em>Auto Detected</em></dd>
-      </dl>
-      
-      <h5 class="text-uppercase text-muted">Examples</h5>
-      {{#ember-highlight-code}}
-        \{{format-date 'gibberish'}}
-        // output: {{format-date 'gibberish'}}
-        
-        \{{format-date '0000-00-00 00:00:00'}}
-        // output: {{format-date '0000-00-00 00:00:00'}}
-      
-        \{{format-date '2015-06-25 16:09:23'}}
-        // output: {{format-date '2015-06-25 16:09:23'}}
-      
-        \{{format-date '2015-06-25 16:09:23' format='MM/DD/YYYY'}}
-        // output: {{format-date '2015-06-25 16:09:23' format='MM/DD/YYYY'}}
-      
-        \{{format-date '2015-06-25 16:09:23' format='ddd, MMM Do, YYYY h:mm a'}}
-        // output: {{format-date '2015-06-25 16:09:23' format='ddd, MMM Do, YYYY h:mm a'}}
-      
-        \{{format-date '20150625160923' format='YYYY-MM-DD HH:mm:ss' inputFormat='YYYYMMDDHHmmss'}}
-        // output: {{format-date '20150625160923' format='YYYY-MM-DD HH:mm:ss' inputFormat='YYYYMMDDHHmmss'}}
-      
-        \{{format-date 'now' format='dddd, MMMM Do YYYY h:mm a'}}
-        // output: {{format-date 'now' format='dddd, MMMM Do YYYY h:mm a'}}
-      {{/ember-highlight-code}}
-    </div>
-  </div>
-  
-  
-  <div class="panel panel-default" id="helper-uc-words">
-    <div class="panel-heading">
-      <div class="panel-title">Upper Case Words</div>
-    </div>
-    
-    <div class="panel-body">
-      <h5 class="text-uppercase text-muted">Parameters</h5>
-      <dl class="dl-horizontal">
-        <dt>string</dt>
-        <dd>The string to be formatted.</dd>
-        <dt><span class="small text-muted">string</span></dt>
-        <dd><code>""</code></dd>
-      </dl>
-      
-      <h5 class="text-uppercase text-muted">Hashed Params</h5>
-      <dl class="dl-horizontal">
-        <dt>force</dt>
-        <dd>If <code>true</code> the string will be foncverted to lower case fisrt.</dd>
-        <dt><span class="small text-muted">boolean</span></dt>
-        <dd><code>false</code></dd>
-      </dl>
-      
-      <h5 class="text-uppercase text-muted">Examples</h5>
-      {{#ember-highlight-code}}
-        \{{uc-words 'hello world'}}
-        // output: {{uc-words 'hello world'}}
-        
-        \{{uc-words 'HELLO WORLD'}}
-        // output: {{uc-words 'HELLO WORLD'}}
-        
-        \{{uc-words 'HELLO WORLD' force=true}}
-        // output: {{uc-words 'HELLO WORLD' force=true}}
-        
-        \{{uc-words 'heLlO wOrlD'}}
-        // output: {{uc-words 'heLlO wOrlD'}}
-        
-        \{{uc-words 'heLlO wOrlD' force=true}}
-        // output: {{uc-words 'heLlO wOrlD' force=true}}
-      {{/ember-highlight-code}}
-    </div>
-  </div>
-  
-  
-  <div class="panel panel-default" id="helper-lower-case">
-    <div class="panel-heading">
-      <div class="panel-title">Lower Case</div>
-    </div>
-    
-    <div class="panel-body">
-      <h5 class="text-uppercase text-muted">Parameters</h5>
-      <dl class="dl-horizontal">
-        <dt>string</dt>
-        <dd>The string to be formatted.</dd>
-        <dt><span class="small text-muted">string</span></dt>
-        <dd><code>""</code></dd>
-      </dl>
-      
-      <h5 class="text-uppercase text-muted">Examples</h5>
-      {{#ember-highlight-code}}
-        \{{lower-case 'HELLO WORLD'}}
-        // output: {{lower-case 'HELLO WORLD'}}
-        
-        \{{lower-case 'heLlO wOrlD'}}
-        // output: {{lower-case 'heLlO wOrlD'}}
-      {{/ember-highlight-code}}
-    </div>
-  </div>
-  
-  
-  <div class="panel panel-default" id="helper-upper-case">
-    <div class="panel-heading">
-      <div class="panel-title">Upper Case</div>
-    </div>
-    
-    <div class="panel-body">
-      <h5 class="text-uppercase text-muted">Parameters</h5>
-      <dl class="dl-horizontal">
-        <dt>string</dt>
-        <dd>The string to be formatted.</dd>
-        <dt><span class="small text-muted">string</span></dt>
-        <dd><code>""</code></dd>
-      </dl>
-      
-      <h5 class="text-uppercase text-muted">Examples</h5>
-      {{#ember-highlight-code}}
-        \{{upper-case 'hello world'}}
-        // output: {{upper-case 'hello world'}}
-        
-        \{{upper-case 'heLlO wOrlD'}}
-        // output: {{upper-case 'heLlO wOrlD'}}
-      {{/ember-highlight-code}}
-    </div>
-  </div>
-  
-  
-  <div class="panel panel-default" id="helper-regexp-replace">
-    <div class="panel-heading">
-      <div class="panel-title">Regexp Replace</div>
-    </div>
-    
-    <div class="panel-body">
-      <h5 class="text-uppercase text-muted">Parameters</h5>
-      <dl class="dl-horizontal">
-        <dt>string</dt>
-        <dd>The string to perform the replacement on.</dd>
-        <dt><span class="small text-muted">string</span></dt>
-        <dd><code>""</code></dd>
-        
-        <dd class="clearfix">&nbsp;</dd>
-        
-        <dt>regex</dt>
-        <dd>The regular expression to be replaced by <code>replacePattern</code>. You can send this parameter with <em>or</em> without the surrounding <code>/</code>. <strong>Do not</strong> include flags in the string. Use the <code>flags</code> hash instead.</dd>
-        <dt><span class="small text-muted">regular expression or string</span></dt>
-        <dd><code>""</code></dd>
-        
-        <dd class="clearfix">&nbsp;</dd>
-        
-        <dt>replacePattern</dt>
-        <dd>The regular expression replacement pattern to replace.</dd>
-        <dt><span class="small text-muted">regular expression or string</span></dt>
-        <dd><code>""</code></dd>
-      </dl>
-      
-      <h5 class="text-uppercase text-muted">Hashed Params</h5>
-      <dl class="dl-horizontal">
-        <dt>flags</dt>
-        <dd>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank"><code>String.prototype.replace()</code></a> native flags. If specified, flags can have any combination of the following values:
+			\{{number-format '1234.56' decimals=2 decimalPoint=',' thousandsSeparator=' '}}
+			// outputs: {{number-format '1234.56' decimals=2 decimalPoint=',' thousandsSeparator=' '}}
 
-          <ul>
-            <li><strong>g</strong> &ndash; global match</li>
-            <li><strong>i</strong> &ndash; ignore case</li>
-            <li><strong>m</strong> &ndash; multiline</li>
-          </ul>
-        </dd>
-        <dt><span class="small text-muted">string</span></dt>
-        <dd><code>null</code></dd>
-      </dl>
-      
-      <h5 class="text-uppercase text-muted">Examples</h5>
-      {{#ember-highlight-code}}
-        \{{regexp-replace 'some long statement' '/ /' '_' flags='g'}}
-        // output: {{regexp-replace 'some long statement' '/ /' '_' flags='g'}}
-        
-        \{{regexp-replace 'I love foo!' '/foo/' 'bar'}}
-        // output: {{regexp-replace 'I love foo!' '/foo/' 'bar'}}
-        
-        \{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the'}}
-        // output: {{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the'}}
-        
-        \{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the' flags='g'}}
-        // output: {{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the' flags='g'}}
-      {{/ember-highlight-code}}
-    </div>
-  </div>
+			\{{number-format '1234.5678' decimals=2 decimalPoint='.' thousandsSeparator=''}}
+			// outputs: {{number-format '1234.5678' decimals=2 decimalPoint='.' thousandsSeparator=''}}
+
+			\{{number-format '67' decimals=2 decimalPoint=',' thousandsSeparator='.'}}
+			// outputs: {{number-format '67' decimals=2 decimalPoint=',' thousandsSeparator='.'}}
+
+			\{{number-format '1000'}}
+			// outputs: {{number-format '1000'}}
+
+			\{{number-format '67.311' decimals=2}}
+			// outputs: {{number-format '67.311' decimals=2}}
+
+			\{{number-format '1000.55' decimals=1}}
+			// outputs: {{number-format '1000.55' decimals=1}}
+
+			\{{number-format '67000' decimals=5 decimalPoint=',' thousandsSeparator='.'}}
+			// outputs: {{number-format '67000' decimals=5 decimalPoint=',' thousandsSeparator='.'}}
+
+			\{{number-format '0.9' decimals=0}}
+			// outputs: {{number-format '0.9' decimals=0}}
+
+			\{{number-format '1.20' decimals=2}}
+			// outputs: {{number-format '1.20' decimals=2}}
+
+			\{{number-format '1.20' decimals=4}}
+			// outputs: {{number-format '1.20' decimals=4}}
+
+			\{{number-format '1.20' decimals=2 trimZeros=true}}
+			// outputs: {{number-format '1.20' decimals=2 trimZeros=true}}
+
+			\{{number-format '1.20' decimals=4 trimZeros=true}}
+			// outputs: {{number-format '1.20' decimals=4 trimZeros=true}}
+
+			\{{number-format '1.2000' decimals=3}}
+			// outputs: {{number-format '1.2000' decimals=3}}
+
+			\{{number-format '1 000,50' decimals=2 decimalPoint='.' thousandsSeparator=' '}}
+			// outputs: {{number-format '1 000,50' decimals=2 decimalPoint='.' thousandsSeparator=' '}}
+
+			\{{number-format '1e-8' decimals=8 decimalPoint='.' thousandsSeparator=''}}
+			// outputs: {{number-format '1e-8' decimals=8 decimalPoint='.' thousandsSeparator=''}}
+			{{/ember-highlight-code}}
+		</div>
+	</div>
+
+	<div class="panel panel-default" id="helper-format-date">
+		<div class="panel-heading">
+			<div class="panel-title">Format Date</div>
+		</div>
+
+		<div class="panel-body">
+			<h5 class="text-uppercase text-muted">Supported Formats</h5>
+			<ul>
+				<li>Any <a href="http://moment.js" target="_blank">moment.js</a> supported format. <a href="http://momentjs.com/docs/#/displaying/format/" target="_blank">Moment.js formatting docs</a></li>
+			</ul>
+
+			<h5 class="text-uppercase text-muted">Parameters</h5>
+			<dl class="dl-horizontal">
+				<dt>date</dt>
+				<dd>The date to be formatted.</dd>
+				<dt><span class="small text-muted">string</span></dt>
+				<dd><code>""</code></dd>
+			</dl>
+
+			<h5 class="text-uppercase text-muted">Hashed Params</h5>
+
+			<dl class="dl-horizontal">
+				<dt>format</dt>
+				<dd>The desired output format of the date.</dd>
+				<dt><span class="small text-muted">moment.js format string</span></dt>
+				<dd><code>"dddd, MMMM Do YYYY, h:mm a"</code></dd>
+
+				<dd class="clearfix">&nbsp;</dd>
+
+				<dt>inputFormat</dt>
+				<dd><strong>Ember-String-Helpers</strong> will attempt to auto detect the format of the incoming string using moment.js' native <a href="http://momentjs.com/docs/#/parsing/string/" target="_blank">string parsing</a>. Manually specefy a format string for dates that do not get formatted.</dd>
+				<dt><span class="small text-muted">moment.js format string</span></dt>
+				<dd><em>Auto Detected</em></dd>
+			</dl>
+
+			<h5 class="text-uppercase text-muted">Examples</h5>
+			{{#ember-highlight-code}}
+			\{{format-date 'gibberish'}}
+			// output: {{format-date 'gibberish'}}
+
+			\{{format-date '0000-00-00 00:00:00'}}
+			// output: {{format-date '0000-00-00 00:00:00'}}
+
+			\{{format-date '2015-06-25 16:09:23'}}
+			// output: {{format-date '2015-06-25 16:09:23'}}
+
+			\{{format-date '2015-06-25 16:09:23' format='MM/DD/YYYY'}}
+			// output: {{format-date '2015-06-25 16:09:23' format='MM/DD/YYYY'}}
+
+			\{{format-date '2015-06-25 16:09:23' format='ddd, MMM Do, YYYY h:mm a'}}
+			// output: {{format-date '2015-06-25 16:09:23' format='ddd, MMM Do, YYYY h:mm a'}}
+
+			\{{format-date '20150625160923' format='YYYY-MM-DD HH:mm:ss' inputFormat='YYYYMMDDHHmmss'}}
+			// output: {{format-date '20150625160923' format='YYYY-MM-DD HH:mm:ss' inputFormat='YYYYMMDDHHmmss'}}
+
+			\{{format-date 'now' format='dddd, MMMM Do YYYY h:mm a'}}
+			// output: {{format-date 'now' format='dddd, MMMM Do YYYY h:mm a'}}
+			{{/ember-highlight-code}}
+		</div>
+	</div>
+
+
+	<div class="panel panel-default" id="helper-uc-words">
+		<div class="panel-heading">
+			<div class="panel-title">Upper Case Words</div>
+		</div>
+
+		<div class="panel-body">
+			<h5 class="text-uppercase text-muted">Parameters</h5>
+			<dl class="dl-horizontal">
+				<dt>string</dt>
+				<dd>The string to be formatted.</dd>
+				<dt><span class="small text-muted">string</span></dt>
+				<dd><code>""</code></dd>
+			</dl>
+
+			<h5 class="text-uppercase text-muted">Hashed Params</h5>
+			<dl class="dl-horizontal">
+				<dt>force</dt>
+				<dd>If <code>true</code> the string will be foncverted to lower case fisrt.</dd>
+				<dt><span class="small text-muted">boolean</span></dt>
+				<dd><code>false</code></dd>
+			</dl>
+
+			<h5 class="text-uppercase text-muted">Examples</h5>
+			{{#ember-highlight-code}}
+			\{{uc-words 'hello world'}}
+			// output: {{uc-words 'hello world'}}
+
+			\{{uc-words 'HELLO WORLD'}}
+			// output: {{uc-words 'HELLO WORLD'}}
+
+			\{{uc-words 'HELLO WORLD' force=true}}
+			// output: {{uc-words 'HELLO WORLD' force=true}}
+
+			\{{uc-words 'heLlO wOrlD'}}
+			// output: {{uc-words 'heLlO wOrlD'}}
+
+			\{{uc-words 'heLlO wOrlD' force=true}}
+			// output: {{uc-words 'heLlO wOrlD' force=true}}
+			{{/ember-highlight-code}}
+		</div>
+	</div>
+
+
+	<div class="panel panel-default" id="helper-lower-case">
+		<div class="panel-heading">
+			<div class="panel-title">Lower Case</div>
+		</div>
+
+		<div class="panel-body">
+			<h5 class="text-uppercase text-muted">Parameters</h5>
+			<dl class="dl-horizontal">
+				<dt>string</dt>
+				<dd>The string to be formatted.</dd>
+				<dt><span class="small text-muted">string</span></dt>
+				<dd><code>""</code></dd>
+			</dl>
+
+			<h5 class="text-uppercase text-muted">Examples</h5>
+			{{#ember-highlight-code}}
+			\{{lower-case 'HELLO WORLD'}}
+			// output: {{lower-case 'HELLO WORLD'}}
+
+			\{{lower-case 'heLlO wOrlD'}}
+			// output: {{lower-case 'heLlO wOrlD'}}
+			{{/ember-highlight-code}}
+		</div>
+	</div>
+
+
+	<div class="panel panel-default" id="helper-upper-case">
+		<div class="panel-heading">
+			<div class="panel-title">Upper Case</div>
+		</div>
+
+		<div class="panel-body">
+			<h5 class="text-uppercase text-muted">Parameters</h5>
+			<dl class="dl-horizontal">
+				<dt>string</dt>
+				<dd>The string to be formatted.</dd>
+				<dt><span class="small text-muted">string</span></dt>
+				<dd><code>""</code></dd>
+			</dl>
+
+			<h5 class="text-uppercase text-muted">Examples</h5>
+			{{#ember-highlight-code}}
+			\{{upper-case 'hello world'}}
+			// output: {{upper-case 'hello world'}}
+
+			\{{upper-case 'heLlO wOrlD'}}
+			// output: {{upper-case 'heLlO wOrlD'}}
+			{{/ember-highlight-code}}
+		</div>
+	</div>
+
+
+	<div class="panel panel-default" id="helper-regexp-replace">
+		<div class="panel-heading">
+			<div class="panel-title">Regexp Replace</div>
+		</div>
+
+		<div class="panel-body">
+			<h5 class="text-uppercase text-muted">Parameters</h5>
+			<dl class="dl-horizontal">
+				<dt>string</dt>
+				<dd>The string to perform the replacement on.</dd>
+				<dt><span class="small text-muted">string</span></dt>
+				<dd><code>""</code></dd>
+
+				<dd class="clearfix">&nbsp;</dd>
+
+				<dt>regex</dt>
+				<dd>The regular expression to be replaced by <code>replacePattern</code>. You can send this parameter with <em>or</em> without the surrounding <code>/</code>. <strong>Do not</strong> include flags in the string. Use the <code>flags</code> hash instead.</dd>
+				<dt><span class="small text-muted">regular expression or string</span></dt>
+				<dd><code>""</code></dd>
+
+				<dd class="clearfix">&nbsp;</dd>
+
+				<dt>replacePattern</dt>
+				<dd>The regular expression replacement pattern to replace.</dd>
+				<dt><span class="small text-muted">regular expression or string</span></dt>
+				<dd><code>""</code></dd>
+			</dl>
+
+			<h5 class="text-uppercase text-muted">Hashed Params</h5>
+			<dl class="dl-horizontal">
+				<dt>flags</dt>
+				<dd>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank"><code>String.prototype.replace()</code></a> native flags. If specified, flags can have any combination of the following values:
+
+					<ul>
+						<li><strong>g</strong> &ndash; global match</li>
+						<li><strong>i</strong> &ndash; ignore case</li>
+						<li><strong>m</strong> &ndash; multiline</li>
+					</ul>
+				</dd>
+				<dt><span class="small text-muted">string</span></dt>
+				<dd><code>null</code></dd>
+			</dl>
+
+			<h5 class="text-uppercase text-muted">Examples</h5>
+			{{#ember-highlight-code}}
+			\{{regexp-replace 'some long statement' '/ /' '_' flags='g'}}
+			// output: {{regexp-replace 'some long statement' '/ /' '_' flags='g'}}
+
+			\{{regexp-replace 'I love foo!' '/foo/' 'bar'}}
+			// output: {{regexp-replace 'I love foo!' '/foo/' 'bar'}}
+
+			\{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the'}}
+			// output: {{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the'}}
+
+			\{{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the' flags='g'}}
+			// output: {{regexp-replace 'I misstype teh all of hte time...' 'teh|hte' 'the' flags='g'}}
+			{{/ember-highlight-code}}
+		</div>
+	</div>
+
+	<div class="panel panel-default" id="helper-substr">
+		<div class="panel-heading">
+			<div class="panel-title">Substr</div>
+		</div>
+
+		<div class="panel-body">
+			<h5 class="text-uppercase text-muted">Parameters</h5>
+			<dl class="dl-horizontal">
+				<dt>string</dt>
+				<dd>The string to perform the substring on.</dd>
+				<dt><span class="small text-muted">string</span></dt>
+				<dd><code>""</code></dd>
+
+				<dd class="clearfix">&nbsp;</dd>
+			</dl>
+
+			<h5 class="text-uppercase text-muted">Hashed Params</h5>
+			<dl class="dl-horizontal">
+				<dt>start</dt>
+				<dd>A character index of the string.  Defaults to <strong>0</strong> if not specified. </dd>
+				<dt><span class="small text-muted">string or number</span></dt>
+				<dd><code>""</code></dd>
+
+				<dd class="clearfix">&nbsp;</dd>
+
+				<dt>length</dt>
+				<dd>collect a number (length) of characters (unless it reaches the end of the string first, in which case it will return fewer).</dd>
+				<dt><span class="small text-muted">string or number</span></dt>
+				<dd><code>""</code></dd>
+			</dl>
+
+			<h5 class="text-uppercase text-muted">Examples</h5>
+			{{#ember-highlight-code}}
+			\{{substr 'abcdefghij' start='2'}}
+			// output: {{substr 'abcdefghij' start='2'}}
+			\{{substr 'abcdefghij' start=2}}
+			// output: {{substr 'abcdefghij' start=2}}
+			\{{substr 'abcdefghij' start='-3' length=2}}
+			// output: {{substr 'abcdefghij' start='-3' length=2}}
+			\{{substr 'abcdefghij' start=-3 length='2'}}
+			// output: {{substr 'abcdefghij' start=-3 length='2'}}
+			\{{substr 'abcdefghij' start=-3 length=2}}
+			// output: {{substr 'abcdefghij' start=-3 length=2}}
+			\{{substr 'abcdefghij' length=2}}
+			// output: {{substr 'abcdefghij' length=2}}
+
+			{{/ember-highlight-code}}
+		</div>
+	</div>
+
 </div>
 
 <div class="clearfix"></div>
 <hr>
 
 <div class="col-xs-12 text-center lead">
-  Created by <a href="https://github.com/ChrisHonniball">@ChrisHonniball</a>
+	Created by <a href="https://github.com/ChrisHonniball">@ChrisHonniball</a>
 </div>
