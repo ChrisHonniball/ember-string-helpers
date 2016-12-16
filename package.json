@@ -1,6 +1,6 @@
 {
   "name": "ember-string-helpers",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Add a collection of string helpers for you to use in your templates.",
   "keywords": [
     "ember-addon",
