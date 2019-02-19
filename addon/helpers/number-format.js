@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { helper } from '@ember/component/helper';
 import { number_format } from 'ember-string-helpers/utils/functions';
 
 export function numberFormat(params, hash) {
@@ -25,4 +25,4 @@ export function numberFormat(params, hash) {
 	return formattedNum;
 }
 
-export default Ember.Helper.helper(numberFormat);
+export default helper(numberFormat);
