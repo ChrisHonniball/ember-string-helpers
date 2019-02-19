@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { helper } from '@ember/component/helper';
 
 export function ucWords(params, hash) {
   var string =  String(params[0]),
@@ -6,7 +6,7 @@ export function ucWords(params, hash) {
 
   if(!string) {
 
-  	return params[0];
+    return params[0];
   }
 
   if(force) {
@@ -18,4 +18,4 @@ export function ucWords(params, hash) {
   });
 }
 
-export default Ember.Helper.helper(ucWords);
+export default helper(ucWords);

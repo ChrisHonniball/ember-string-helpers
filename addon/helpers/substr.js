@@ -1,5 +1,6 @@
-import Ember from 'ember';
+import { helper } from '@ember/component/helper';
 
+// eslint-disable-next-line no-unused-vars
 export function substr([value, ...rest], hash) {
 	if (typeof value === 'string') {
 		let start = hash.start || 0;
@@ -10,4 +11,4 @@ export function substr([value, ...rest], hash) {
 	}
 }
 
-export default Ember.Helper.helper(substr);
+export default helper(substr);

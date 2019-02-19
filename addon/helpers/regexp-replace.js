@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { helper } from '@ember/component/helper';
 
 export function regexpReplace(params, hash) {
   var string = params[0],
@@ -10,4 +10,4 @@ export function regexpReplace(params, hash) {
   return string.replace(regexPattern, replacePattern);
 }
 
-export default Ember.Helper.helper(regexpReplace);
+export default helper(regexpReplace);
